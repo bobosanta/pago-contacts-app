@@ -20,7 +20,23 @@ struct ContentView: View {
                         NavigationLink {
                             Text("User with name \(user.name)")
                         } label: {
-                            Text(user.name)
+                            HStack {
+                                if user.id.isMultiple(of: 2) {
+                                    ZStack {
+                                        Circle()
+                                            .fill(Color.gray)
+                                        Text(getInitials(for: user))
+                                            .foregroundStyle(.white)
+                                    }
+                                    .frame(width: 46, height: 46)
+                                } else {
+                                    Image(systemName: "trash.square.fill")
+                                        .resizable()
+                                        .frame(width: 46, height: 46)
+                                        .clipShape(.circle)
+                                }
+                                Text(user.name)
+                            }.frame(height: 94)
                         }
                     }
                 } header: {
@@ -79,6 +95,12 @@ struct ContentView: View {
     
     private func addUser() {
         
+    }
+    
+    private func getInitials(for user: User) -> String {
+        let words = user.name.split(separator: " ")
+        let firstLetters = words.map { String($0.first ?? Character("")) }.prefix(2)
+        return firstLetters.joined()
     }
 }
 

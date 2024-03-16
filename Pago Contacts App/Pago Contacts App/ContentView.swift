@@ -11,24 +11,39 @@ import SwiftData
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var users: [User]
-
+    
     var body: some View {
-        List {
-            ForEach(users) { user in
-                Text(user.name)
+        NavigationView {
+            List {
+                Section {
+                    ForEach(users) { user in
+                        NavigationLink {
+                            Text("User with name \(user.name)")
+                        } label: {
+                            Text(user.name)
+                        }
+                    }
+                } header: {
+                    Text("Contactele mele")
+                }
+                
+            }.onAppear(perform: {
+                //            deleteData()
+                do {
+                    if try modelContext.fetchCount(FetchDescriptor<User>()) == 0 {
+                        getUsers()
+                    }
+                } catch {
+                    print("Cannot fetch modelContext count")
+                }
+            })
+            .toolbar {
+                ToolbarItem {
+                    Button(action: addUser) {
+                        Label("Add User", systemImage: "plus")
+                    }
+                }
             }
-        }.onAppear(perform: {
-//            deleteData()
-            do {
-                if try modelContext.fetchCount(FetchDescriptor<User>()) == 0 {
-                   getUsers()
-               }
-            } catch {
-                print("Cannot fetch modelContext count")
-            }
-        })
-        .toolbar {
-            
         }
     }
     
@@ -60,6 +75,10 @@ struct ContentView: View {
         users.forEach {
             modelContext.delete($0)
         }
+    }
+    
+    private func addUser() {
+        
     }
 }
 

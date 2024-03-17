@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  UsersView.swift
 //  Pago Contacts App
 //
 //  Created by Santamarian Bogdan on 16.03.2024.
@@ -8,7 +8,8 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct UsersView: View {
+    
     @Environment(\.modelContext) private var modelContext
     @Query private var users: [User]
     
@@ -18,7 +19,7 @@ struct ContentView: View {
                 Section {
                     ForEach(users) { user in
                         NavigationLink {
-                            Text("User with name \(user.name)")
+                            UserDetailsView(user: user)
                         } label: {
                             HStack {
                                 if user.id.isMultiple(of: 2) {
@@ -30,10 +31,22 @@ struct ContentView: View {
                                     }
                                     .frame(width: 46, height: 46)
                                 } else {
-                                    Image(systemName: "trash.square.fill")
-                                        .resizable()
-                                        .frame(width: 46, height: 46)
-                                        .clipShape(.circle)
+                                    AsyncImage(url: URL(string: "https://picsum.photos/200/200")) { phase in
+                                        switch phase {
+                                        case .success(let image):
+                                            image
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(width: 46, height: 46)
+                                                .clipShape(.circle)
+                                        case .failure(let error):
+                                            Text("Failed to load image: \(error.localizedDescription)")
+                                        case .empty:
+                                            ProgressView()
+                                        @unknown default:
+                                            EmptyView()
+                                        }
+                                    }
                                 }
                                 Text(user.name)
                             }.frame(height: 94)
@@ -105,6 +118,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    UsersView()
         .modelContainer(for: User.self, inMemory: true)
 }

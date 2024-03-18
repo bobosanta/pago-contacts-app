@@ -13,11 +13,12 @@ struct UserDetailsView: View {
     
     var body: some View {
         Form {
-            TextField("Nume", text: $user.name)
-            TextField("Prenume", text: $user.surname.toUnwrapped(defaultValue: ""))
-            TextField("Telefon", text: $user.phoneNumber.toUnwrapped(defaultValue: ""))
-            TextField("Email", text: $user.email)
+            TextField("name".localized, text: $user.name)
+            TextField("surname".localized, text: $user.surname.toUnwrapped(defaultValue: ""))
+            TextField("phone".localized, text: $user.phoneNumber.toUnwrapped(defaultValue: ""))
+            TextField("email".localized, text: $user.email)
         }
+        .navigationTitle($user.name)
     }
 }
 

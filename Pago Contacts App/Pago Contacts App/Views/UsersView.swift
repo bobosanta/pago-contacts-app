@@ -55,7 +55,7 @@ struct UsersView: View {
                         }
                     }
                 } header: {
-                    Text("Contactele mele")
+                    Text("myContacts".localized)
                 }
             }.onAppear(perform: {
                 //            deleteData()
@@ -67,6 +67,7 @@ struct UsersView: View {
                     print("Cannot fetch modelContext count")
                 }
             })
+            .navigationTitle("contacts".localized)
             .toolbar {
                 Button(action: {
                     showAddDialog.toggle()

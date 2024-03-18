@@ -23,18 +23,17 @@ struct AddNewUserView: View {
     var body: some View {
         NavigationStack {
             Form {
-                TextField("Nume", text: $name)
-                TextField("Prenume", text: $surname)
-                TextField("Telefon", text: $phoneNumber)
-                TextField("Email", text: $email)
-                TextField("Gen", text: $gender)
-                TextField("Status Cont", text: $status)
+                TextField("name".localized, text: $name)
+                TextField("surname".localized, text: $surname)
+                TextField("phone".localized, text: $phoneNumber)
+                TextField("email".localized, text: $email)
             }
+            .navigationTitle("addContact".localized)
             
             Button(action: {
                 saveUser()
             }, label: {
-                Text("Salvează")
+                Text("saveButtonTitle".localized)
             })
         }
     }

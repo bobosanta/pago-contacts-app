@@ -20,6 +20,8 @@
 		0CA25CE62BA8466600A09FDD /* AddNewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CE52BA8466600A09FDD /* AddNewUserView.swift */; };
 		0CA25CEB2BA84CE500A09FDD /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CEA2BA84CE500A09FDD /* Color+Extension.swift */; };
 		0CA25CED2BA84CF900A09FDD /* PagoColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CEC2BA84CF900A09FDD /* PagoColors.swift */; };
+		0CA25CF02BA84F4C00A09FDD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CA25CF22BA84F4C00A09FDD /* Localizable.strings */; };
+		0CA25CF72BA850CA00A09FDD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CF62BA850CA00A09FDD /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		0CA25CE52BA8466600A09FDD /* AddNewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserView.swift; sourceTree = "<group>"; };
 		0CA25CEA2BA84CE500A09FDD /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		0CA25CEC2BA84CF900A09FDD /* PagoColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagoColors.swift; sourceTree = "<group>"; };
+		0CA25CF12BA84F4C00A09FDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0CA25CF32BA84F4D00A09FDD /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0CA25CF62BA850CA00A09FDD /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,7 @@
 				0CA25BFA2BA57ECB00A09FDD /* Pago_Contacts_AppApp.swift */,
 				0CA25C002BA57ECD00A09FDD /* Assets.xcassets */,
 				0CA25C022BA57ECD00A09FDD /* Preview Content */,
+				0CA25CF22BA84F4C00A09FDD /* Localizable.strings */,
 			);
 			path = "Pago Contacts App";
 			sourceTree = "<group>";
@@ -165,6 +171,7 @@
 				0CA25CE32BA8446000A09FDD /* Bindable+Extension.swift */,
 				0CA25CEA2BA84CE500A09FDD /* Color+Extension.swift */,
 				0CA25CEC2BA84CF900A09FDD /* PagoColors.swift */,
+				0CA25CF62BA850CA00A09FDD /* String+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -255,6 +262,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ro,
 			);
 			mainGroup = 0CA25BEE2BA57ECB00A09FDD;
 			productRefGroup = 0CA25BF82BA57ECB00A09FDD /* Products */;
@@ -274,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CA25C042BA57ECD00A09FDD /* Preview Assets.xcassets in Resources */,
+				0CA25CF02BA84F4C00A09FDD /* Localizable.strings in Resources */,
 				0CA25C012BA57ECD00A09FDD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +315,7 @@
 				0CA25CED2BA84CF900A09FDD /* PagoColors.swift in Sources */,
 				0CA25CE42BA8446000A09FDD /* Bindable+Extension.swift in Sources */,
 				0CA25CE62BA8466600A09FDD /* AddNewUserView.swift in Sources */,
+				0CA25CF72BA850CA00A09FDD /* String+Extension.swift in Sources */,
 				0CA25BFB2BA57ECB00A09FDD /* Pago_Contacts_AppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +351,18 @@
 			targetProxy = 0CA25C142BA57ECD00A09FDD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0CA25CF22BA84F4C00A09FDD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CA25CF12BA84F4C00A09FDD /* en */,
+				0CA25CF32BA84F4D00A09FDD /* ro */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0CA25C1B2BA57ECD00A09FDD /* Debug */ = {

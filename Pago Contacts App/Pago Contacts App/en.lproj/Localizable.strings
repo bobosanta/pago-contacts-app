@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  Pago Contacts App
+
+  Created by Santamarian Bogdan on 18.03.2024.
+  
+*/
+
+//MARK: - Contacts List
+"contacts" = "Contacts";
+"myContacts" = "MY CONTACTS";
+
+//MARK: - Contact Detailes
+"addContact" = "Add new contact";
+"name" = "NAME";
+"surname" = "SURNAME";
+"phone" = "PHONE NUMBER";
+"email" = "EMAIL";
+"saveButtonTitle" = "Save";

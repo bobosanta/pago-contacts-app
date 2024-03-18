@@ -13,6 +13,8 @@ struct UsersView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var users: [User]
     
+    @State private var showAddDialog: Bool = false
+    
     var body: some View {
         NavigationStack {
             List {
@@ -66,12 +68,15 @@ struct UsersView: View {
                 }
             })
             .toolbar {
-                ToolbarItem {
-                    Button(action: addUser) {
-                        Label("Add User", systemImage: "plus")
-                    }
-                }
+                Button(action: {
+                    showAddDialog.toggle()
+                }, label: {
+                    Label("Add User", systemImage: "plus")
+                })
             }
+            .sheet(isPresented: $showAddDialog, content: {
+                AddNewUserView(showAddDialog: $showAddDialog)
+            })
         }
     }
     

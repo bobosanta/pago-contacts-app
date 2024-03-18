@@ -18,5 +18,5 @@ struct UserDetailsView: View {
 }
 
 #Preview {
-    UserDetailsView(user: User(id: 1, name: "", email: "", gender: "", status: ""))
+    UserDetailsView(user: User(id: 1, name: "", surname: "", email: "", phoneNumber: "", gender: "", status: ""))
 }

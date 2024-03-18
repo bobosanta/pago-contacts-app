@@ -14,7 +14,7 @@ struct UsersView: View {
     @Query private var users: [User]
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 Section {
                     ForEach(users) { user in
@@ -55,7 +55,6 @@ struct UsersView: View {
                 } header: {
                     Text("Contactele mele")
                 }
-                
             }.onAppear(perform: {
                 //            deleteData()
                 do {

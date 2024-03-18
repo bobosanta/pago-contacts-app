@@ -58,7 +58,7 @@ struct UsersView: View {
                     Text("myContacts".localized)
                 }
             }.onAppear(perform: {
-                //            deleteData()
+//                deleteData()
                 do {
                     if try modelContext.fetchCount(FetchDescriptor<User>()) == 0 {
                         getUsers()
@@ -95,7 +95,8 @@ struct UsersView: View {
             
             do {
                 let users = try JSONDecoder().decode([User].self, from: data)
-                users.forEach {
+                let activeUsers = users.filter { $0.status == "active" }
+                activeUsers.forEach {
                     self.modelContext.insert($0)
                 }
             } catch {

@@ -39,7 +39,7 @@ struct AddNewUserView: View {
     }
     
     private func saveUser() {
-        let user = User(id: Int.random(in: 1..<99999), name: name, surname: surname, email: email, phoneNumber: phoneNumber, gender: gender, status: status)
+        let user = User(id: Int.random(in: 1..<99999), name: name, email: email, gender: gender, status: status)
         modelContext.insert(user)
         showAddDialog.toggle()
     }

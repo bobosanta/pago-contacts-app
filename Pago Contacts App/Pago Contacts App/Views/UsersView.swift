@@ -57,7 +57,10 @@ struct UsersView: View {
                 } header: {
                     Text("myContacts".localized)
                 }
-            }.onAppear(perform: {
+            }
+            .listStyle(.plain)
+            .onAppear(perform: {
+                // For testing purposes only
 //                deleteData()
                 do {
                     if try modelContext.fetchCount(FetchDescriptor<User>()) == 0 {
@@ -79,6 +82,7 @@ struct UsersView: View {
                 AddNewUserView(showAddDialog: $showAddDialog)
             })
         }
+        .ignoresSafeArea(.all)
     }
     
     private func getUsers() {

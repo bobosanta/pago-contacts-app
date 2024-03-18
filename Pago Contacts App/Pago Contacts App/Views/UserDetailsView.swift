@@ -16,12 +16,13 @@ struct UserDetailsView: View {
     @State private var surname: String = ""
     
     var body: some View {
-        Form {
+        List {
             CustomTextField(title: "name".localized, text: $name)
             CustomTextField(title: "surname".localized, text: $surname)
             CustomTextField(title: "phone".localized, text: $user.phoneNumber.toUnwrapped(defaultValue: ""))
             CustomTextField(title: "email".localized, text: $user.email)
         }
+        .listRowSpacing(24)
         .onAppear {
             if let (surname, name) = splitName(user.name) {
                 self.surname = surname

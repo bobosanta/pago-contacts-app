@@ -14,10 +14,19 @@ struct CustomTextField: View {
     
     var body: some View {
         VStack(alignment: .leading) {
+            Spacer()
             Text(title)
                 .foregroundStyle(PagoColors.textFieldTitleLabelColor)
+                .font(.system(size: 14))
             TextField("", text: $text)
+                .font(.system(size: 14))
+            Rectangle()
+                .frame(height: 1)
+                .foregroundColor(PagoColors.lightGray)
+            Spacer()
         }
+        .frame(height: 85)
+        .background(.white)
         .textFieldStyle(.plain)
     }
 }

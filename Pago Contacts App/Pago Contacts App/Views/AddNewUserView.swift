@@ -22,19 +22,20 @@ struct AddNewUserView: View {
     
     var body: some View {
         NavigationStack {
-            Form {
-                TextField("name".localized, text: $name)
-                TextField("surname".localized, text: $surname)
-                TextField("phone".localized, text: $phoneNumber)
-                TextField("email".localized, text: $email)
+            List {
+                Section {
+                    CustomTextField(title: "name".localized, text: $name)
+                    CustomTextField(title: "surname".localized, text: $surname)
+                    CustomTextField(title: "phone".localized, text: $phoneNumber)
+                    CustomTextField(title: "email".localized, text: $email)
+                }
             }
             .navigationTitle("addContact".localized)
+            .listRowSpacing(24)
             
-            Button(action: {
+            ConfirmationButton {
                 saveUser()
-            }, label: {
-                Text("saveButtonTitle".localized)
-            })
+            }
         }
     }
     
@@ -43,4 +44,8 @@ struct AddNewUserView: View {
         modelContext.insert(user)
         showAddDialog.toggle()
     }
+}
+
+#Preview {
+    AddNewUserView(showAddDialog: .constant(false))
 }

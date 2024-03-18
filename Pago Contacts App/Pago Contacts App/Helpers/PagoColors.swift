@@ -12,4 +12,5 @@ struct PagoColors {
     static let mediumGray = Color.init(hex: "#C1C8D7")
     static let textFieldTitleLabelColor = Color.init(hex: "#98A5BE")
     static let saveButtonBackgroundColor = Color.init(hex: "#2CC84D")
+    static let saveButtonDropShadowColor = Color.init(hex: "#00000029")
 }

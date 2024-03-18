@@ -9,11 +9,15 @@ import SwiftUI
 
 struct UserDetailsView: View {
     
-    @Environment(\.modelContext) private var modelContext
-    let user: User
+    @Bindable var user: User
     
     var body: some View {
-        Text("User with name \(user.name)")
+        Form {
+            TextField("Nume", text: $user.name)
+            TextField("Prenume", text: $user.surname.toUnwrapped(defaultValue: ""))
+            TextField("Telefon", text: $user.phoneNumber.toUnwrapped(defaultValue: ""))
+            TextField("Email", text: $user.email)
+        }
     }
 }
 

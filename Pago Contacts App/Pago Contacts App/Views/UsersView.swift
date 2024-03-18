@@ -72,12 +72,13 @@ struct UsersView: View {
             })
             .navigationTitle("contacts".localized)
             .toolbar {
-                Button(action: {
-                    showAddDialog.toggle()
-                }, label: {
-                    Label("Add User", systemImage: "plus")
-                })
+                ToolbarItem(placement: .confirmationAction) {
+                    AddNewUserButton {
+                        showAddDialog.toggle()
+                    }
+                }
             }
+            .toolbarTitleDisplayMode(.inlineLarge)
             .sheet(isPresented: $showAddDialog, content: {
                 AddNewUserView(showAddDialog: $showAddDialog)
             })

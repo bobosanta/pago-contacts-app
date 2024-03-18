@@ -18,6 +18,8 @@
 		0CA25C5F2BA58D8800A09FDD /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25C5E2BA58D8800A09FDD /* UserDetailsView.swift */; };
 		0CA25CE42BA8446000A09FDD /* Bindable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CE32BA8446000A09FDD /* Bindable+Extension.swift */; };
 		0CA25CE62BA8466600A09FDD /* AddNewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CE52BA8466600A09FDD /* AddNewUserView.swift */; };
+		0CA25CEB2BA84CE500A09FDD /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CEA2BA84CE500A09FDD /* Color+Extension.swift */; };
+		0CA25CED2BA84CF900A09FDD /* PagoColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CEC2BA84CF900A09FDD /* PagoColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		0CA25C5E2BA58D8800A09FDD /* UserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
 		0CA25CE32BA8446000A09FDD /* Bindable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bindable+Extension.swift"; sourceTree = "<group>"; };
 		0CA25CE52BA8466600A09FDD /* AddNewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserView.swift; sourceTree = "<group>"; };
+		0CA25CEA2BA84CE500A09FDD /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		0CA25CEC2BA84CF900A09FDD /* PagoColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagoColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,14 +106,12 @@
 		0CA25BF92BA57ECB00A09FDD /* Pago Contacts App */ = {
 			isa = PBXGroup;
 			children = (
+				0CA25CE92BA84C9300A09FDD /* Helpers */,
+				0CA25CE82BA84C8700A09FDD /* Models */,
+				0CA25CE72BA84C6900A09FDD /* Views */,
 				0CA25BFA2BA57ECB00A09FDD /* Pago_Contacts_AppApp.swift */,
-				0CA25BFC2BA57ECB00A09FDD /* UsersView.swift */,
-				0CA25C5E2BA58D8800A09FDD /* UserDetailsView.swift */,
-				0CA25BFE2BA57ECB00A09FDD /* User.swift */,
 				0CA25C002BA57ECD00A09FDD /* Assets.xcassets */,
 				0CA25C022BA57ECD00A09FDD /* Preview Content */,
-				0CA25CE32BA8446000A09FDD /* Bindable+Extension.swift */,
-				0CA25CE52BA8466600A09FDD /* AddNewUserView.swift */,
 			);
 			path = "Pago Contacts App";
 			sourceTree = "<group>";
@@ -137,6 +139,34 @@
 				0CA25C192BA57ECD00A09FDD /* Pago_Contacts_AppUITestsLaunchTests.swift */,
 			);
 			path = "Pago Contacts AppUITests";
+			sourceTree = "<group>";
+		};
+		0CA25CE72BA84C6900A09FDD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0CA25BFC2BA57ECB00A09FDD /* UsersView.swift */,
+				0CA25C5E2BA58D8800A09FDD /* UserDetailsView.swift */,
+				0CA25CE52BA8466600A09FDD /* AddNewUserView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0CA25CE82BA84C8700A09FDD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0CA25BFE2BA57ECB00A09FDD /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0CA25CE92BA84C9300A09FDD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0CA25CE32BA8446000A09FDD /* Bindable+Extension.swift */,
+				0CA25CEA2BA84CE500A09FDD /* Color+Extension.swift */,
+				0CA25CEC2BA84CF900A09FDD /* PagoColors.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,8 +300,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CA25C5F2BA58D8800A09FDD /* UserDetailsView.swift in Sources */,
+				0CA25CEB2BA84CE500A09FDD /* Color+Extension.swift in Sources */,
 				0CA25BFD2BA57ECB00A09FDD /* UsersView.swift in Sources */,
 				0CA25BFF2BA57ECB00A09FDD /* User.swift in Sources */,
+				0CA25CED2BA84CF900A09FDD /* PagoColors.swift in Sources */,
 				0CA25CE42BA8446000A09FDD /* Bindable+Extension.swift in Sources */,
 				0CA25CE62BA8466600A09FDD /* AddNewUserView.swift in Sources */,
 				0CA25BFB2BA57ECB00A09FDD /* Pago_Contacts_AppApp.swift in Sources */,

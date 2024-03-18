@@ -27,7 +27,7 @@ struct UsersView: View {
                                 if user.id.isMultiple(of: 2) {
                                     ZStack {
                                         Circle()
-                                            .fill(Color.gray)
+                                            .fill(PagoColors.lightGray)
                                         Text(getInitials(for: user))
                                             .foregroundStyle(.white)
                                     }

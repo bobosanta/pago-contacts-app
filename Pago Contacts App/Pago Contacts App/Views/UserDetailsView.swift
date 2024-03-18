@@ -17,10 +17,10 @@ struct UserDetailsView: View {
     
     var body: some View {
         Form {
-            TextField("name".localized, text: $name)
-            TextField("surname".localized, text: $surname)
-            TextField("phone".localized, text: $user.phoneNumber.toUnwrapped(defaultValue: ""))
-            TextField("email".localized, text: $user.email)
+            CustomTextField(title: "name".localized, text: $name)
+            CustomTextField(title: "surname".localized, text: $surname)
+            CustomTextField(title: "phone".localized, text: $user.phoneNumber.toUnwrapped(defaultValue: ""))
+            CustomTextField(title: "email".localized, text: $user.email)
         }
         .onAppear {
             if let (surname, name) = splitName(user.name) {
@@ -37,10 +37,14 @@ struct UserDetailsView: View {
     // MARK: - Private methods
     private func splitName(_ fullName: String) -> (String, String)? {
         let components = fullName.components(separatedBy: " ")
-        guard components.count == 2 else {
+        guard components.count >= 2 else {
             return nil
         }
-        return (components[0], components[1])
+        
+        let firstName = components.dropLast().joined(separator: " ")
+        let lastName = components.last ?? ""
+        
+        return (firstName, lastName)
     }
     
     private func updateUserFullName() {

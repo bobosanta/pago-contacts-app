@@ -12,11 +12,10 @@
 		0CA25BFF2BA57ECB00A09FDD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25BFE2BA57ECB00A09FDD /* User.swift */; };
 		0CA25C012BA57ECD00A09FDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CA25C002BA57ECD00A09FDD /* Assets.xcassets */; };
 		0CA25C042BA57ECD00A09FDD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CA25C032BA57ECD00A09FDD /* Preview Assets.xcassets */; };
-		0CA25C0E2BA57ECD00A09FDD /* Pago_Contacts_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25C0D2BA57ECD00A09FDD /* Pago_Contacts_AppTests.swift */; };
-		0CA25C182BA57ECD00A09FDD /* Pago_Contacts_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25C172BA57ECD00A09FDD /* Pago_Contacts_AppUITests.swift */; };
-		0CA25C1A2BA57ECD00A09FDD /* Pago_Contacts_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25C192BA57ECD00A09FDD /* Pago_Contacts_AppUITestsLaunchTests.swift */; };
+		0CA25C0E2BA57ECD00A09FDD /* PagoContactsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25C0D2BA57ECD00A09FDD /* PagoContactsAppTests.swift */; };
+		0CA25C182BA57ECD00A09FDD /* PagoContactsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25C172BA57ECD00A09FDD /* PagoContactsAppUITests.swift */; };
+		0CA25C1A2BA57ECD00A09FDD /* PagoContactsAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25C192BA57ECD00A09FDD /* PagoContactsAppUITestsLaunchTests.swift */; };
 		0CA25C5F2BA58D8800A09FDD /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25C5E2BA58D8800A09FDD /* UserDetailsView.swift */; };
-		0CA25CE42BA8446000A09FDD /* Bindable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CE32BA8446000A09FDD /* Bindable+Extension.swift */; };
 		0CA25CEB2BA84CE500A09FDD /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CEA2BA84CE500A09FDD /* Color+Extension.swift */; };
 		0CA25CED2BA84CF900A09FDD /* PagoColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CEC2BA84CF900A09FDD /* PagoColors.swift */; };
 		0CA25CF02BA84F4C00A09FDD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CA25CF22BA84F4C00A09FDD /* Localizable.strings */; };
@@ -53,12 +52,11 @@
 		0CA25C002BA57ECD00A09FDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CA25C032BA57ECD00A09FDD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0CA25C092BA57ECD00A09FDD /* Pago Contacts AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pago Contacts AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CA25C0D2BA57ECD00A09FDD /* Pago_Contacts_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pago_Contacts_AppTests.swift; sourceTree = "<group>"; };
+		0CA25C0D2BA57ECD00A09FDD /* PagoContactsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagoContactsAppTests.swift; sourceTree = "<group>"; };
 		0CA25C132BA57ECD00A09FDD /* Pago Contacts AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pago Contacts AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CA25C172BA57ECD00A09FDD /* Pago_Contacts_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pago_Contacts_AppUITests.swift; sourceTree = "<group>"; };
-		0CA25C192BA57ECD00A09FDD /* Pago_Contacts_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pago_Contacts_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0CA25C172BA57ECD00A09FDD /* PagoContactsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagoContactsAppUITests.swift; sourceTree = "<group>"; };
+		0CA25C192BA57ECD00A09FDD /* PagoContactsAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagoContactsAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0CA25C5E2BA58D8800A09FDD /* UserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
-		0CA25CE32BA8446000A09FDD /* Bindable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bindable+Extension.swift"; sourceTree = "<group>"; };
 		0CA25CEA2BA84CE500A09FDD /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		0CA25CEC2BA84CF900A09FDD /* PagoColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagoColors.swift; sourceTree = "<group>"; };
 		0CA25CF12BA84F4C00A09FDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -141,7 +139,7 @@
 		0CA25C0C2BA57ECD00A09FDD /* Pago Contacts AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				0CA25C0D2BA57ECD00A09FDD /* Pago_Contacts_AppTests.swift */,
+				0CA25C0D2BA57ECD00A09FDD /* PagoContactsAppTests.swift */,
 			);
 			path = "Pago Contacts AppTests";
 			sourceTree = "<group>";
@@ -149,8 +147,8 @@
 		0CA25C162BA57ECD00A09FDD /* Pago Contacts AppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				0CA25C172BA57ECD00A09FDD /* Pago_Contacts_AppUITests.swift */,
-				0CA25C192BA57ECD00A09FDD /* Pago_Contacts_AppUITestsLaunchTests.swift */,
+				0CA25C172BA57ECD00A09FDD /* PagoContactsAppUITests.swift */,
+				0CA25C192BA57ECD00A09FDD /* PagoContactsAppUITestsLaunchTests.swift */,
 			);
 			path = "Pago Contacts AppUITests";
 			sourceTree = "<group>";
@@ -179,7 +177,6 @@
 		0CA25CE92BA84C9300A09FDD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				0CA25CE32BA8446000A09FDD /* Bindable+Extension.swift */,
 				0CA25CEA2BA84CE500A09FDD /* Color+Extension.swift */,
 				0CA25CEC2BA84CF900A09FDD /* PagoColors.swift */,
 				0CA25CF62BA850CA00A09FDD /* String+Extension.swift */,
@@ -198,6 +195,7 @@
 				0CA25BF32BA57ECB00A09FDD /* Sources */,
 				0CA25BF42BA57ECB00A09FDD /* Frameworks */,
 				0CA25BF52BA57ECB00A09FDD /* Resources */,
+				0CDE60752BA9D71E001CB100 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -315,6 +313,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CDE60752BA9D71E001CB100 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0CA25BF32BA57ECB00A09FDD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -326,7 +345,6 @@
 				0CA25BFF2BA57ECB00A09FDD /* User.swift in Sources */,
 				0CA25CF92BA863C600A09FDD /* CustomTextField.swift in Sources */,
 				0CA25CED2BA84CF900A09FDD /* PagoColors.swift in Sources */,
-				0CA25CE42BA8446000A09FDD /* Bindable+Extension.swift in Sources */,
 				0CDE60742BA9CACA001CB100 /* Constants.swift in Sources */,
 				0CDE60702BA9C95A001CB100 /* UserProfileImageView.swift in Sources */,
 				0CA25CF72BA850CA00A09FDD /* String+Extension.swift in Sources */,
@@ -340,7 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CA25C0E2BA57ECD00A09FDD /* Pago_Contacts_AppTests.swift in Sources */,
+				0CA25C0E2BA57ECD00A09FDD /* PagoContactsAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,8 +366,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CA25C1A2BA57ECD00A09FDD /* Pago_Contacts_AppUITestsLaunchTests.swift in Sources */,
-				0CA25C182BA57ECD00A09FDD /* Pago_Contacts_AppUITests.swift in Sources */,
+				0CA25C1A2BA57ECD00A09FDD /* PagoContactsAppUITestsLaunchTests.swift in Sources */,
+				0CA25C182BA57ECD00A09FDD /* PagoContactsAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +528,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Pago Contacts App/Preview Content\"";
 				DEVELOPMENT_TEAM = B6W985PHBM;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -539,6 +558,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Pago Contacts App/Preview Content\"";
 				DEVELOPMENT_TEAM = B6W985PHBM;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

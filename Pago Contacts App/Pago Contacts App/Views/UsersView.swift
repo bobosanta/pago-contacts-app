@@ -5,8 +5,8 @@
 //  Created by Santamarian Bogdan on 16.03.2024.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 struct UsersView: View {
     
@@ -43,7 +43,7 @@ struct UsersView: View {
                         UserDetailsView(user: nil)
                     } label: {
                         Image(uiImage: UIImage(named: "addUser.png") ?? UIImage())
-                            .frame(width:17, height: 17)
+                            .frame(width: 17, height: 17)
                             .padding(9)
                     }
                     .frame(width: 36, height: 36)
@@ -75,7 +75,7 @@ struct UsersView: View {
             return
         }
         
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        let task = URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data, error == nil else {
                 print("Error: \(error?.localizedDescription ?? "Unknown error")")
                 return

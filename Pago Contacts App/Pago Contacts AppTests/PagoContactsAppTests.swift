@@ -1,14 +1,14 @@
 //
-//  Pago_Contacts_AppTests.swift
+//  PagoContactsAppTests.swift
 //  Pago Contacts AppTests
 //
 //  Created by Santamarian Bogdan on 16.03.2024.
 //
 
-import XCTest
 @testable import Pago_Contacts_App
+import XCTest
 
-final class Pago_Contacts_AppTests: XCTestCase {
+final class PagoContactsAppTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

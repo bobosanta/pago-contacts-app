@@ -1,18 +1,18 @@
 //
-//  Pago_Contacts_AppApp.swift
+//  PagoContactsAppApp.swift
 //  Pago Contacts App
 //
 //  Created by Santamarian Bogdan on 16.03.2024.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 @main
-struct Pago_Contacts_AppApp: App {
+struct PagoContactsAppApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            User.self,
+            User.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 

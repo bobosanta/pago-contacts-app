@@ -25,6 +25,9 @@ struct UserDetailsView: View {
     private var fullName: String {
         [surname, name].joined(separator: " ")
     }
+    private var randomId: Int {
+        Int.random(in: 1..<99999)
+    }
     
     var body: some View {
         List {
@@ -76,13 +79,9 @@ struct UserDetailsView: View {
             user.gender = gender
             user.status = status
         } else {
-            let user = User(id: generateRandomId(), name: fullName, phoneNumber: phoneNumber, email: email, gender: gender, status: status)
+            let user = User(id: randomId, name: fullName, phoneNumber: phoneNumber, email: email, gender: gender, status: status)
             modelContext.insert(user)
         }
-    }
-    
-    private func generateRandomId() -> Int {
-        return Int.random(in: 1..<99999)
     }
     
 }

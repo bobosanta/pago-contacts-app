@@ -1,5 +1,5 @@
 //
-//  Pago_Contacts_AppUITestsLaunchTests.swift
+//  PagoContactsAppUITestsLaunchTests.swift
 //  Pago Contacts AppUITests
 //
 //  Created by Santamarian Bogdan on 16.03.2024.
@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class Pago_Contacts_AppUITestsLaunchTests: XCTestCase {
+final class PagoContactsAppUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

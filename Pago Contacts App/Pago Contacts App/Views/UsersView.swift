@@ -42,13 +42,13 @@ struct UsersView: View {
                     NavigationLink {
                         UserDetailsView(user: nil)
                     } label: {
-                        Image(uiImage: UIImage(named: "addUser.png") ?? UIImage())
+                        Image(.addUser)
                             .frame(width: 17, height: 17)
                             .padding(9)
                     }
                     .frame(width: 36, height: 36)
                     .background(.white)
-                    .overlay(RoundedRectangle(cornerRadius: 7).stroke(PagoColors.mediumGray, lineWidth: 2))
+                    .overlay(RoundedRectangle(cornerRadius: 7).stroke(.pagoGrayTwo, lineWidth: 2))
 
                 }
             }

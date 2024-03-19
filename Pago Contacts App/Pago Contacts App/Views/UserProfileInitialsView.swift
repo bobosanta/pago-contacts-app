@@ -15,7 +15,7 @@ struct UserProfileInitialsView: View {
     var body: some View {
         ZStack {
             Circle()
-                .fill(PagoColors.mediumGray)
+                .fill(.pagoGrayTwo)
             Text(getInitials(for: user))
                 .foregroundStyle(.white)
                 .fontWeight(.medium)

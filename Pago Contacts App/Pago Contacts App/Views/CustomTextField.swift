@@ -17,13 +17,13 @@ struct CustomTextField: View {
         VStack(alignment: .leading) {
             Spacer()
             Text(title)
-                .foregroundStyle(PagoColors.textFieldTitleLabelColor)
+                .foregroundStyle(.pagoGrayThree)
                 .font(.system(size: 14))
             TextField("", text: $text)
                 .font(.system(size: 14))
             Rectangle()
                 .frame(height: 1)
-                .foregroundColor(PagoColors.lightGray)
+                .foregroundColor(.pagoGrayThree)
             Spacer()
         }
         .frame(height: 85)

@@ -20,14 +20,14 @@ struct ConfirmationButton: View {
                 Text(Constants.saveButtonTitleLocalized)
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(PagoColors.saveButtonBackgroundColor)
+                    .background(.pagoGreen)
                     .foregroundStyle(.white)
                     .cornerRadius(10)
             }
             Spacer()
         }
         .padding(.horizontal, 16)
-        .shadow(color: PagoColors.saveButtonDropShadowColor.opacity(0.2), radius: 5, x: 0, y: 3)
+        .shadow(color: .pagoDarkBlue.opacity(0.2), radius: 5, x: 0, y: 3)
     }
 }
 

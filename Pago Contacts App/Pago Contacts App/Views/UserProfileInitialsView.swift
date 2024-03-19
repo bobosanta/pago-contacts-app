@@ -15,9 +15,10 @@ struct UserProfileInitialsView: View {
     var body: some View {
         ZStack {
             Circle()
-                .fill(PagoColors.lightGray)
+                .fill(PagoColors.mediumGray)
             Text(getInitials(for: user))
                 .foregroundStyle(.white)
+                .fontWeight(.medium)
         }
         .frame(width: 46, height: 46)
     }
@@ -28,4 +29,8 @@ struct UserProfileInitialsView: View {
         let firstLetters = words.map { String($0.first ?? Character("")) }.prefix(2)
         return firstLetters.joined()
     }
+}
+
+#Preview {
+    UserProfileInitialsView(user: User(id: 2, name: "Johnny Cage", email: "", gender: "", status: ""))
 }

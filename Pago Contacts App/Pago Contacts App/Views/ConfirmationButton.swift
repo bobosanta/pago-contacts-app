@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ConfirmationButton: View {
     
+    // MARK: - Properties
     var action: () -> Void
     
     var body: some View {

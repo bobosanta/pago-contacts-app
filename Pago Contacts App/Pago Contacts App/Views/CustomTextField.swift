@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CustomTextField: View {
     
+    // MARK: - Properties
     var title = ""
     @Binding var text: String
     

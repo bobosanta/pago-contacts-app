@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UserProfileInitialsView: View {
     
+    // MARK: - Properties
     var user: User
     
     var body: some View {

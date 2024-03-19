@@ -26,9 +26,10 @@ final class User: Codable {
     var gender: String
     var status: String
     
-    init(id: Int, name: String, email: String, gender: String, status: String) {
+    init(id: Int, name: String, phoneNumber: String? = nil, email: String, gender: String, status: String) {
         self.id = id
         self.name = name
+        self.phoneNumber = phoneNumber
         self.email = email
         self.gender = gender
         self.status = status

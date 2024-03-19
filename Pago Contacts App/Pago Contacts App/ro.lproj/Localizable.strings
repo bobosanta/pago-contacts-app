@@ -12,6 +12,7 @@
 
 //MARK: - Contact Detailes
 "addContact" = "Adaugă contact";
+"editContact" = "Editează contact";
 "name" = "NUME";
 "surname" = "PRENUME";
 "phone" = "TELEFON";

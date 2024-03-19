@@ -17,14 +17,12 @@
 		0CA25C1A2BA57ECD00A09FDD /* Pago_Contacts_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25C192BA57ECD00A09FDD /* Pago_Contacts_AppUITestsLaunchTests.swift */; };
 		0CA25C5F2BA58D8800A09FDD /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25C5E2BA58D8800A09FDD /* UserDetailsView.swift */; };
 		0CA25CE42BA8446000A09FDD /* Bindable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CE32BA8446000A09FDD /* Bindable+Extension.swift */; };
-		0CA25CE62BA8466600A09FDD /* AddNewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CE52BA8466600A09FDD /* AddNewUserView.swift */; };
 		0CA25CEB2BA84CE500A09FDD /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CEA2BA84CE500A09FDD /* Color+Extension.swift */; };
 		0CA25CED2BA84CF900A09FDD /* PagoColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CEC2BA84CF900A09FDD /* PagoColors.swift */; };
 		0CA25CF02BA84F4C00A09FDD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CA25CF22BA84F4C00A09FDD /* Localizable.strings */; };
 		0CA25CF72BA850CA00A09FDD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CF62BA850CA00A09FDD /* String+Extension.swift */; };
 		0CA25CF92BA863C600A09FDD /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CF82BA863C600A09FDD /* CustomTextField.swift */; };
 		0CA25CFD2BA875CC00A09FDD /* ConfirmationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CFC2BA875CC00A09FDD /* ConfirmationButton.swift */; };
-		0CA25CFF2BA87DCE00A09FDD /* AddNewUserButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25CFE2BA87DCD00A09FDD /* AddNewUserButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +56,6 @@
 		0CA25C192BA57ECD00A09FDD /* Pago_Contacts_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pago_Contacts_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0CA25C5E2BA58D8800A09FDD /* UserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
 		0CA25CE32BA8446000A09FDD /* Bindable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bindable+Extension.swift"; sourceTree = "<group>"; };
-		0CA25CE52BA8466600A09FDD /* AddNewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserView.swift; sourceTree = "<group>"; };
 		0CA25CEA2BA84CE500A09FDD /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		0CA25CEC2BA84CF900A09FDD /* PagoColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagoColors.swift; sourceTree = "<group>"; };
 		0CA25CF12BA84F4C00A09FDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -66,7 +63,6 @@
 		0CA25CF62BA850CA00A09FDD /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		0CA25CF82BA863C600A09FDD /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		0CA25CFC2BA875CC00A09FDD /* ConfirmationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationButton.swift; sourceTree = "<group>"; };
-		0CA25CFE2BA87DCD00A09FDD /* AddNewUserButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,10 +154,8 @@
 			children = (
 				0CA25BFC2BA57ECB00A09FDD /* UsersView.swift */,
 				0CA25C5E2BA58D8800A09FDD /* UserDetailsView.swift */,
-				0CA25CE52BA8466600A09FDD /* AddNewUserView.swift */,
 				0CA25CF82BA863C600A09FDD /* CustomTextField.swift */,
 				0CA25CFC2BA875CC00A09FDD /* ConfirmationButton.swift */,
-				0CA25CFE2BA87DCD00A09FDD /* AddNewUserButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -324,11 +318,9 @@
 				0CA25CF92BA863C600A09FDD /* CustomTextField.swift in Sources */,
 				0CA25CED2BA84CF900A09FDD /* PagoColors.swift in Sources */,
 				0CA25CE42BA8446000A09FDD /* Bindable+Extension.swift in Sources */,
-				0CA25CE62BA8466600A09FDD /* AddNewUserView.swift in Sources */,
 				0CA25CF72BA850CA00A09FDD /* String+Extension.swift in Sources */,
 				0CA25BFB2BA57ECB00A09FDD /* Pago_Contacts_AppApp.swift in Sources */,
 				0CA25CFD2BA875CC00A09FDD /* ConfirmationButton.swift in Sources */,
-				0CA25CFF2BA87DCE00A09FDD /* AddNewUserButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

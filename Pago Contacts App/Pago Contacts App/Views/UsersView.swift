@@ -13,8 +13,6 @@ struct UsersView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var users: [User]
     
-    @State private var showAddDialog: Bool = false
-    
     var body: some View {
         NavigationStack {
             List {
@@ -58,6 +56,21 @@ struct UsersView: View {
                     Text("myContacts".localized)
                 }
             }
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    NavigationLink {
+                        UserDetailsView(user: nil)
+                    } label: {
+                        Image(uiImage: UIImage(named: "addUser.png") ?? UIImage())
+                            .frame(width:17, height: 17)
+                            .padding(9)
+                    }
+                    .frame(width: 36, height: 36)
+                    .background(.white)
+                    .overlay(RoundedRectangle(cornerRadius: 7).stroke(PagoColors.mediumGray, lineWidth: 2))
+
+                }
+            }
             .listStyle(.plain)
             .onAppear(perform: {
                 // For testing purposes only
@@ -71,17 +84,8 @@ struct UsersView: View {
                 }
             })
             .navigationTitle("contacts".localized)
-            .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
-                    AddNewUserButton {
-                        showAddDialog.toggle()
-                    }
-                }
-            }
+            
             .toolbarTitleDisplayMode(.inlineLarge)
-            .sheet(isPresented: $showAddDialog, content: {
-                AddNewUserView(showAddDialog: $showAddDialog)
-            })
         }
         .ignoresSafeArea(.all)
     }

@@ -20,9 +20,9 @@ final class User: Codable {
     
     var id: Int
     var name: String
-    var surname: String? = nil
+    var surname: String?
     var email: String
-    var phoneNumber: String? = nil
+    var phoneNumber: String?
     var gender: String
     var status: String
     

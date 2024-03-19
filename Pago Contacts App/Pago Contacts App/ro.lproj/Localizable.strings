@@ -8,13 +8,13 @@
 
 //MARK: - Contacts List
 "contacts" = "Contacte";
-"myContacts" = "CONTACTELE MELE";
+"my-contacts" = "CONTACTELE MELE";
 
 //MARK: - Contact Detailes
-"addContact" = "Adaugă contact";
-"editContact" = "Editează contact";
+"add-contact" = "Adaugă contact";
+"edit-contact" = "Editează contact";
 "name" = "NUME";
 "surname" = "PRENUME";
 "phone" = "TELEFON";
 "email" = "EMAIL";
-"saveButtonTitle" = "Salvează";
+"save-button-title" = "Salvează";

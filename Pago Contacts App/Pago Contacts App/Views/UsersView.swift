@@ -10,6 +10,7 @@ import SwiftData
 
 struct UsersView: View {
     
+    // MARK: - Properties
     @Environment(\.modelContext) private var modelContext
     @Query private var users: [User]
     
@@ -23,39 +24,19 @@ struct UsersView: View {
                         } label: {
                             HStack {
                                 if user.id.isMultiple(of: 2) {
-                                    ZStack {
-                                        Circle()
-                                            .fill(PagoColors.lightGray)
-                                        Text(getInitials(for: user))
-                                            .foregroundStyle(.white)
-                                    }
-                                    .frame(width: 46, height: 46)
+                                    UserProfileInitialsView(user: user)
                                 } else {
-                                    AsyncImage(url: URL(string: "https://picsum.photos/200/200")) { phase in
-                                        switch phase {
-                                        case .success(let image):
-                                            image
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fit)
-                                                .frame(width: 46, height: 46)
-                                                .clipShape(.circle)
-                                        case .failure(let error):
-                                            Text("Failed to load image: \(error.localizedDescription)")
-                                        case .empty:
-                                            ProgressView()
-                                        @unknown default:
-                                            EmptyView()
-                                        }
-                                    }
+                                    UserProfileImageView()
                                 }
                                 Text(user.name)
                             }.frame(height: 94)
                         }
                     }
                 } header: {
-                    Text("myContacts".localized)
+                    Text(Constants.myContactsLocalized)
                 }
             }
+            .listStyle(.plain)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     NavigationLink {
@@ -71,7 +52,7 @@ struct UsersView: View {
 
                 }
             }
-            .listStyle(.plain)
+            .toolbarTitleDisplayMode(.inlineLarge)
             .onAppear(perform: {
                 // For testing purposes only
 //                deleteData()
@@ -83,13 +64,11 @@ struct UsersView: View {
                     print("Cannot fetch modelContext count")
                 }
             })
-            .navigationTitle("contacts".localized)
-            
-            .toolbarTitleDisplayMode(.inlineLarge)
+            .navigationTitle(Constants.contactsLocalized)
         }
-        .ignoresSafeArea(.all)
     }
     
+    // MARK: - Private Methods
     private func getUsers() {
         guard let url = URL(string: "https://gorest.co.in/public/v2/users") else {
             print("Invalid URL")
@@ -119,16 +98,6 @@ struct UsersView: View {
         users.forEach {
             modelContext.delete($0)
         }
-    }
-    
-    private func addUser() {
-        
-    }
-    
-    private func getInitials(for user: User) -> String {
-        let words = user.name.split(separator: " ")
-        let firstLetters = words.map { String($0.first ?? Character("")) }.prefix(2)
-        return firstLetters.joined()
     }
 }
 

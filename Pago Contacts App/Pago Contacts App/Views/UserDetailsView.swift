@@ -13,8 +13,6 @@ struct UserDetailsView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.presentationMode) var presentationMode
     
-    var user: User?
-    
     @State private var name = ""
     @State private var surname = ""
     @State private var phoneNumber = ""
@@ -22,12 +20,18 @@ struct UserDetailsView: View {
     @State private var gender = ""
     @State private var status = ""
     
+    var user: User?
+    
+    private var fullName: String {
+        [surname, name].joined(separator: " ")
+    }
+    
     var body: some View {
         List {
-            CustomTextField(title: "name".localized, text: $name)
-            CustomTextField(title: "surname".localized, text: $surname)
-            CustomTextField(title: "phone".localized, text: $phoneNumber)
-            CustomTextField(title: "email".localized, text: $email)
+            CustomTextField(title: Constants.nameLocalized, text: $name)
+            CustomTextField(title: Constants.surnameLocalized, text: $surname)
+            CustomTextField(title: Constants.phoneLocalized, text: $phoneNumber)
+            CustomTextField(title: Constants.emailLocalized, text: $email)
         }
         .listRowSpacing(24)
         .onAppear {
@@ -42,7 +46,7 @@ struct UserDetailsView: View {
             }
         }
         .navigationTitle(
-            user == nil ? "addContact".localized : "editContact".localized
+            user == nil ? Constants.addContactLocalized : Constants.editContactLocalized
         )
         
         ConfirmationButton {
@@ -64,19 +68,15 @@ struct UserDetailsView: View {
         return (firstName, lastName)
     }
     
-    private func updateUserFullName() -> String {
-        return "\(surname) \(name)"
-    }
-    
     private func saveUser() {
         if let user {
-            user.name = updateUserFullName()
+            user.name = fullName
             user.phoneNumber = phoneNumber
             user.email = email
             user.gender = gender
             user.status = status
         } else {
-            let user = User(id: generateRandomId(), name: updateUserFullName(), phoneNumber: phoneNumber, email: email, gender: gender, status: status)
+            let user = User(id: generateRandomId(), name: fullName, phoneNumber: phoneNumber, email: email, gender: gender, status: status)
             modelContext.insert(user)
         }
     }

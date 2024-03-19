@@ -16,7 +16,7 @@ struct ConfirmationButton: View {
             Button {
                 action()
             } label: {
-                Text("saveButtonTitle".localized)
+                Text(Constants.saveButtonTitleLocalized)
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(PagoColors.saveButtonBackgroundColor)

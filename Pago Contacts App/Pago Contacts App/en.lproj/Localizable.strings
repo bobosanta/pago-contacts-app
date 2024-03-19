@@ -8,13 +8,13 @@
 
 //MARK: - Contacts List
 "contacts" = "Contacts";
-"myContacts" = "MY CONTACTS";
+"my-contacts" = "MY CONTACTS";
 
 //MARK: - Contact Detailes
-"addContact" = "Add new contact";
-"editContact" = "Edit contact";
+"add-contact" = "Add new contact";
+"edit-contact" = "Edit contact";
 "name" = "NAME";
 "surname" = "SURNAME";
 "phone" = "PHONE NUMBER";
 "email" = "EMAIL";
-"saveButtonTitle" = "Save";
+"save-button-title" = "Save";

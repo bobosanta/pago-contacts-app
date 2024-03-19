@@ -11,6 +11,7 @@ struct UserDetailsView: View {
     
     // MARK: - Properties
     @Environment(\.modelContext) private var modelContext
+    @Environment(\.presentationMode) var presentationMode
     
     var user: User?
     
@@ -46,6 +47,7 @@ struct UserDetailsView: View {
         
         ConfirmationButton {
             saveUser()
+            presentationMode.wrappedValue.dismiss()
         }
     }
     

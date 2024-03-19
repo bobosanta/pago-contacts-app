@@ -13,6 +13,7 @@ struct UsersView: View {
     // MARK: - Properties
     @Environment(\.modelContext) private var modelContext
     @Query private var users: [User]
+    @StateObject private var usersService = UsersService()
     
     var body: some View {
         NavigationStack {
@@ -58,7 +59,7 @@ struct UsersView: View {
 //                deleteData()
                 do {
                     if try modelContext.fetchCount(FetchDescriptor<User>()) == 0 {
-                        getUsers()
+                        usersService.getUsers()
                     }
                 } catch {
                     print("Cannot fetch modelContext count")
@@ -69,31 +70,6 @@ struct UsersView: View {
     }
     
     // MARK: - Private Methods
-    private func getUsers() {
-        guard let url = URL(string: "https://gorest.co.in/public/v2/users") else {
-            print("Invalid URL")
-            return
-        }
-        
-        let task = URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data, error == nil else {
-                print("Error: \(error?.localizedDescription ?? "Unknown error")")
-                return
-            }
-            
-            do {
-                let users = try JSONDecoder().decode([User].self, from: data)
-                let activeUsers = users.filter { $0.status == "active" }
-                activeUsers.forEach {
-                    self.modelContext.insert($0)
-                }
-            } catch {
-                print("Error decoding JSON: \(error)")
-            }
-        }
-        task.resume()
-    }
-    
     private func deleteData() {
         users.forEach {
             modelContext.delete($0)

@@ -24,6 +24,7 @@
 		0CDE60702BA9C95A001CB100 /* UserProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDE606F2BA9C95A001CB100 /* UserProfileImageView.swift */; };
 		0CDE60742BA9CACA001CB100 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDE60732BA9CACA001CB100 /* Constants.swift */; };
 		0CF797592BA9DBC800EA4279 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CF797582BA9DBC800EA4279 /* Colors.xcassets */; };
+		0CF7975F2BA9E3BD00EA4279 /* UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF7975E2BA9E3BD00EA4279 /* UsersService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		0CDE606F2BA9C95A001CB100 /* UserProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileImageView.swift; sourceTree = "<group>"; };
 		0CDE60732BA9CACA001CB100 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0CF797582BA9DBC800EA4279 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		0CF7975E2BA9E3BD00EA4279 /* UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			children = (
 				0CA25CF62BA850CA00A09FDD /* String+Extension.swift */,
 				0CDE60732BA9CACA001CB100 /* Constants.swift */,
+				0CF7975E2BA9E3BD00EA4279 /* UsersService.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CF7975F2BA9E3BD00EA4279 /* UsersService.swift in Sources */,
 				0CA25C5F2BA58D8800A09FDD /* UserDetailsView.swift in Sources */,
 				0CA25BFD2BA57ECB00A09FDD /* UsersView.swift in Sources */,
 				0CA25BFF2BA57ECB00A09FDD /* User.swift in Sources */,

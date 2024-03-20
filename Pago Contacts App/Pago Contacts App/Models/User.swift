@@ -10,6 +10,7 @@ import SwiftData
 
 @Model
 final class User: Codable {
+    
     enum CodingKeys: CodingKey {
         case id
         case name
@@ -18,15 +19,20 @@ final class User: Codable {
         case status
     }
     
+    enum Status: String, Codable {
+        case active
+        case inactive
+    }
+    
     var id: Int
     var name: String
     var surname: String?
     var email: String
     var phoneNumber: String?
     var gender: String
-    var status: String
+    var status: Status
     
-    init(id: Int, name: String, phoneNumber: String? = nil, email: String, gender: String, status: String) {
+    init(id: Int, name: String, phoneNumber: String? = nil, email: String, gender: String, status: Status) {
         self.id = id
         self.name = name
         self.phoneNumber = phoneNumber
@@ -41,7 +47,7 @@ final class User: Codable {
         name = try container.decode(String.self, forKey: .name)
         email = try container.decode(String.self, forKey: .email)
         gender = try container.decode(String.self, forKey: .gender)
-        status = try container.decode(String.self, forKey: .status)
+        status = try container.decode(Status.self, forKey: .status)
     }
     
     func encode(to encoder: Encoder) throws {

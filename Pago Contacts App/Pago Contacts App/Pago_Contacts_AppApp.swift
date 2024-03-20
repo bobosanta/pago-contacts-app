@@ -25,7 +25,7 @@ struct PagoContactsAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            UsersView()
+            UsersView(modelContext: sharedModelContainer.mainContext)
         }
         .modelContainer(sharedModelContainer)
     }

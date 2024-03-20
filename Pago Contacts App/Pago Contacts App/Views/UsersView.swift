@@ -11,15 +11,17 @@ import SwiftUI
 struct UsersView: View {
     
     // MARK: - Properties
-    @Environment(\.modelContext) private var modelContext
-    @Query private var users: [User]
-    @StateObject private var usersService = UsersService()
+    @State private var viewModel: UsersViewModel
+    
+    init(modelContext: ModelContext) {
+        _viewModel = State(initialValue: UsersViewModel(modelContext: modelContext))
+    }
     
     var body: some View {
         NavigationStack {
             List {
                 Section {
-                    ForEach(users) { user in
+                    ForEach(viewModel.users) { user in
                         NavigationLink {
                             UserDetailsView(user: user)
                         } label: {
@@ -54,30 +56,7 @@ struct UsersView: View {
                 }
             }
             .toolbarTitleDisplayMode(.inlineLarge)
-            .onAppear(perform: {
-                // For testing purposes only
-//                deleteData()
-                do {
-                    if try modelContext.fetchCount(FetchDescriptor<User>()) == 0 {
-                        usersService.getUsers()
-                    }
-                } catch {
-                    print("Cannot fetch modelContext count")
-                }
-            })
             .navigationTitle(Constants.contactsLocalized)
         }
     }
-    
-    // MARK: - Private Methods
-    private func deleteData() {
-        users.forEach {
-            modelContext.delete($0)
-        }
-    }
-}
-
-#Preview {
-    UsersView()
-        .modelContainer(for: User.self, inMemory: true)
 }

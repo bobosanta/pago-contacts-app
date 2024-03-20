@@ -30,7 +30,3 @@ struct UserProfileInitialsView: View {
         return firstLetters.joined()
     }
 }
-
-#Preview {
-    UserProfileInitialsView(user: User(id: 2, name: "Johnny Cage", email: "", gender: "", status: ""))
-}

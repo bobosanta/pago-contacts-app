@@ -72,20 +72,20 @@ struct UserDetailsView: View {
     }
     
     private func saveUser() {
-        if let user {
-            user.name = fullName
-            user.phoneNumber = phoneNumber
-            user.email = email
-            user.gender = gender
-            user.status = status
-        } else {
-            let user = User(id: randomId, name: fullName, phoneNumber: phoneNumber, email: email, gender: gender, status: status)
-            modelContext.insert(user)
-        }
+//        if let user {
+//            user.name = fullName
+//            user.phoneNumber = phoneNumber
+//            user.email = email
+//            user.gender = gender
+//            user.status = status
+//        } else {
+//            let user = User(id: randomId, name: fullName, phoneNumber: phoneNumber, email: email, gender: gender, status: status)
+//            modelContext.insert(user)
+//        }
     }
     
 }
 
 #Preview {
-    UserDetailsView(user: User(id: 1, name: "", email: "", gender: "", status: ""))
+    UserDetailsView(user: User(id: 1, name: "", email: "", gender: "", status: .active))
 }

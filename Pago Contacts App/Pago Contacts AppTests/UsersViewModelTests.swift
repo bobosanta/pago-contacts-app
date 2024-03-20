@@ -23,15 +23,19 @@ final class UsersViewModelTests: XCTestCase {
         sut = nil
     }
 
-    func testLoadUsers_usersExist() {
+    func testLoadUsers_usersExist() async {
         userService.doUsersExist = true
+        
+        await sut.loadUsers()
         XCTAssertTrue(userService.isUsersExistCalled)
         XCTAssertTrue(userService.isGetUsersFromDbCalled)
         XCTAssertFalse(userService.isFetchUsersCalled)
     }
     
-    func testLoadUsers_usersDontExist() {
+    func testLoadUsers_usersDontExist() async {
         userService.doUsersExist = false
+        
+        await sut.loadUsers()
         XCTAssertTrue(userService.isUsersExistCalled)
         XCTAssertFalse(userService.isGetUsersFromDbCalled)
         XCTAssertTrue(userService.isFetchUsersCalled)

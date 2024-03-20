@@ -12,6 +12,7 @@ import SwiftData
 @Observable
 final class UsersViewModel {
     
+    // TODO: show error in UI
     var error: Error?
     private let userService: UserService
     
@@ -19,12 +20,9 @@ final class UsersViewModel {
     
     init(userService: UserService) {
         self.userService = userService
-        Task {
-            await loadUsers()
-        }
     }
     
-    private func loadUsers() async {
+    func loadUsers() async {
         let usersExistResult = userService.usersExist()
         switch usersExistResult {
         case let .success(usersExist):
@@ -38,6 +36,7 @@ final class UsersViewModel {
         }
     }
     
+    // MARK: - Private methods
     private func getUsersFromDb() {
         let getUsersResult = userService.getUsersFromDb()
         switch getUsersResult {
@@ -57,5 +56,4 @@ final class UsersViewModel {
             self.error = error
         }
     }
-    
 }

@@ -11,4 +11,6 @@ protocol UserService {
     func usersExist() -> Result<Bool, Error>
     func fetchUsers() async -> Result<[User], Error>
     func getUsersFromDb() -> Result<[User], Error>
+    func createUser(name: String, email: String, phoneNumber: String)
+    func updateUser(_ user: User, name: String, email: String, phoneNumber: String)
 }

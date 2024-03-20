@@ -31,7 +31,3 @@ struct CustomTextField: View {
         .textFieldStyle(.plain)
     }
 }
-
-#Preview {
-    CustomTextField(title: "Title", text: .constant("Sample Text"))
-}

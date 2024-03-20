@@ -9,13 +9,18 @@ import Foundation
 import SwiftData
 
 class UserServiceImpl: UserService {
-    
+    // MARK: - Properties
     private let modelContext: ModelContext
+    
+    private var randomId: Int {
+        Int.random(in: 1..<9999999)
+    }
     
     init(modelContext: ModelContext) {
         self.modelContext = modelContext
     }
     
+    // MARK: - Implementation
     func usersExist() -> Result<Bool, Error> {
         do {
             return .success(try modelContext.fetchCount(FetchDescriptor<User>()) > 0)
@@ -37,8 +42,7 @@ class UserServiceImpl: UserService {
             users.forEach {
                 self.modelContext.insert($0)
             }
-
-            return .success(users)
+            return .success(users.sorted { $0.id < $1.id })
         } catch {
             print(error.localizedDescription)
             return .failure(error)
@@ -47,11 +51,21 @@ class UserServiceImpl: UserService {
     
     func getUsersFromDb() -> Result<[User], Error> {
         do {
-            return .success(try modelContext.fetch(FetchDescriptor<User>()))
+            return .success(try modelContext.fetch(FetchDescriptor<User>(sortBy: [SortDescriptor(\.id)])))
         } catch {
             print(error.localizedDescription)
             return .failure(error)
         }
     }
     
+    func createUser(name: String, email: String, phoneNumber: String) {
+        let user = User(id: randomId, name: name, phoneNumber: phoneNumber, email: email, status: .active)
+        modelContext.insert(user)
+    }
+    
+    func updateUser(_ user: User, name: String, email: String, phoneNumber: String) {
+        user.name = name
+        user.email = email
+        user.phoneNumber = phoneNumber
+    }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct UserProfileImageView: View {
+    
     var body: some View {
         AsyncImage(url: URL(string: "https://picsum.photos/200/200")) { phase in
             switch phase {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C9C20C92BAB1CD200A1AF8A /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9C20C82BAB1CD200A1AF8A /* UserDetailsViewModel.swift */; };
 		0CA25BFB2BA57ECB00A09FDD /* Pago_Contacts_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25BFA2BA57ECB00A09FDD /* Pago_Contacts_AppApp.swift */; };
 		0CA25BFD2BA57ECB00A09FDD /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25BFC2BA57ECB00A09FDD /* UsersView.swift */; };
 		0CA25BFF2BA57ECB00A09FDD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA25BFE2BA57ECB00A09FDD /* User.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C9C20C82BAB1CD200A1AF8A /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
 		0CA25BF72BA57ECB00A09FDD /* Pago Contacts App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pago Contacts App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CA25BFA2BA57ECB00A09FDD /* Pago_Contacts_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pago_Contacts_AppApp.swift; sourceTree = "<group>"; };
 		0CA25BFC2BA57ECB00A09FDD /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				0CA25C5E2BA58D8800A09FDD /* UserDetailsView.swift */,
+				0C9C20C82BAB1CD200A1AF8A /* UserDetailsViewModel.swift */,
 			);
 			path = UserDetails;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				0CDE60742BA9CACA001CB100 /* Constants.swift in Sources */,
 				0CDE60702BA9C95A001CB100 /* UserProfileImageView.swift in Sources */,
 				0CA25CF72BA850CA00A09FDD /* String+Extension.swift in Sources */,
+				0C9C20C92BAB1CD200A1AF8A /* UserDetailsViewModel.swift in Sources */,
 				0CA25BFB2BA57ECB00A09FDD /* Pago_Contacts_AppApp.swift in Sources */,
 				0CA25CFD2BA875CC00A09FDD /* ConfirmationButton.swift in Sources */,
 				0CDE606E2BA9C8D4001CB100 /* UserProfileInitialsView.swift in Sources */,

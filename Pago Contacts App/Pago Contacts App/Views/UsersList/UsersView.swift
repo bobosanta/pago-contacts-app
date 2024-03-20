@@ -11,6 +11,7 @@ import SwiftUI
 struct UsersView: View {
     
     // MARK: - Properties
+    @Environment(\.modelContext) private var modelContext
     @State private var viewModel: UsersViewModel
     
     init(modelContext: ModelContext) {
@@ -23,7 +24,7 @@ struct UsersView: View {
                 Section {
                     ForEach(viewModel.users) { user in
                         NavigationLink {
-                            UserDetailsView(user: user)
+                            UserDetailsView(user: user, modelContext: modelContext)
                         } label: {
                             HStack {
                                 if user.id.isMultiple(of: 2) {
@@ -43,7 +44,7 @@ struct UsersView: View {
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     NavigationLink {
-                        UserDetailsView(user: nil)
+                        UserDetailsView(modelContext: modelContext)
                     } label: {
                         Image(.addUser)
                             .frame(width: 17, height: 17)
@@ -57,6 +58,11 @@ struct UsersView: View {
             }
             .toolbarTitleDisplayMode(.inlineLarge)
             .navigationTitle(Constants.contactsLocalized)
+            .onAppear {
+                Task {
+                    await viewModel.loadUsers()
+                }
+            }
         }
     }
 }

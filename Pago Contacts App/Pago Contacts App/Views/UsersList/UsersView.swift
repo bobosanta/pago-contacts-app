@@ -14,7 +14,7 @@ struct UsersView: View {
     @State private var viewModel: UsersViewModel
     
     init(modelContext: ModelContext) {
-        _viewModel = State(initialValue: UsersViewModel(modelContext: modelContext))
+        _viewModel = State(initialValue: UsersViewModel(userService: UserServiceImpl(modelContext: modelContext)))
     }
     
     var body: some View {

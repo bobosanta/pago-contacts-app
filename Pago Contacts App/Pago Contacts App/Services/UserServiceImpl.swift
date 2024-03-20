@@ -1,5 +1,5 @@
 //
-//  UsersService.swift
+//  UserServiceImpl.swift
 //  Pago Contacts App
 //
 //  Created by Santamarian Bogdan on 19.03.2024.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftData
 
-class UserService: ObservableObject {
+class UserServiceImpl: UserService {
     
     private let modelContext: ModelContext
     
@@ -45,12 +45,12 @@ class UserService: ObservableObject {
         }
     }
     
-    private func getUsersFromDb() -> [User] {
+    func getUsersFromDb() -> Result<[User], Error> {
         do {
-            return try modelContext.fetch(FetchDescriptor<User>())
+            return .success(try modelContext.fetch(FetchDescriptor<User>()))
         } catch {
             print(error.localizedDescription)
-            return []
+            return .failure(error)
         }
     }
     
